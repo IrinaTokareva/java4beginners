@@ -8,7 +8,7 @@ public class Task14 {
         int X;
         try {
             X = Integer.parseInt(S);
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             System.out.println(S + " не является целым числом");
             return;
         }
