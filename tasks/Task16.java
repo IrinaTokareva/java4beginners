@@ -4,8 +4,7 @@ import java.io.IOException;
 
 public class Task16 {
     public static void main(String[] args) {
-        String filename = "C:/Users/USER/IdeaProjects/java4beginners/files/" +
-                "textForTask16.txt";
+        String filename = "files/textForTask16.txt";
         try {
             BufferedReader bufferedReader = new BufferedReader(
                     new FileReader(filename));
@@ -15,6 +14,7 @@ public class Task16 {
                 System.out.println(s);
                 s = bufferedReader.readLine();
             }
+            bufferedReader.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

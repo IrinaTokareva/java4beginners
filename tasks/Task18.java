@@ -2,8 +2,7 @@ import java.io.*;
 
 public class Task18 {
     public static void main(String[] args) {
-        String filename = "C:/Users/USER/IdeaProjects/java4beginners/files/" +
-                "textForTask18.txt";
+        String filename = "files/textForTask18.txt";
         try {
             int numberOfLines = displayFileContent(filename);
             writeNumberOfLinesToFile(filename, numberOfLines);
@@ -23,6 +22,7 @@ public class Task18 {
             System.out.println(s);
             s = bufferedReader.readLine();
         }
+        bufferedReader.close();
         return numberOfLines;
     }
 
