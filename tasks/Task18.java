@@ -16,11 +16,10 @@ public class Task18 {
         BufferedReader bufferedReader = new BufferedReader(
                 new FileReader(filename));
         System.out.println("Текст из файла:");
-        String s = bufferedReader.readLine();
-        while (s != null) {
+        String s;
+        while ((s = bufferedReader.readLine()) != null) {
             numberOfLines++;
             System.out.println(s);
-            s = bufferedReader.readLine();
         }
         bufferedReader.close();
         return numberOfLines;

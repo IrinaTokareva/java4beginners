@@ -10,11 +10,10 @@ public class Task17 {
             System.out.println("Введите текст для записи в файл. Запись будет " +
                     "вестись построчно до тех пор, пока не будет введена команда " +
                     "\"стоп\" в консоли");
-            String s = null;
-            do {
-                fileWriter.write(s == null ? "" : s + "\n");
-                s = bufferedReader.readLine();
-            } while (!s.toLowerCase().equals("стоп"));
+            String s;
+            while (!(s = bufferedReader.readLine()).toLowerCase().equals("стоп")) {
+                fileWriter.write(s + "\n");
+            }
             fileWriter.flush();
             fileWriter.close();
         } catch (Exception e) {
